@@ -1,0 +1,9 @@
+<h1>My Faviorate Stores:</h1>
+
+<%@stores.each do |store|%>
+
+<p>Name: <%=store.name %>  Location: <%=store.location %> </p>
+
+<p> Image:</p><image src="<%= store.url%>">
+
+<% end%> 
