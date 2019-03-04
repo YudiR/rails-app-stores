@@ -2,7 +2,9 @@
 
 <%@stores.each do |store|%>
 
-<p>Name: <%=store.name %>  Location: <%=store.location %> </p>
+<p>Name: <%=store.name %> </p> 
+
+<p> Location: <%=store.location %> </p>
 
 <p> Image:</p><image src="<%= store.url%>">
 

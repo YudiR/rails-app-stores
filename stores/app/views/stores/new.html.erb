@@ -1,2 +1,23 @@
-<h1>Stores#new</h1>
-<p>Find me in app/views/stores/new.html.erb</p>
+<h1> add a store</h1>
+
+<%= form_for @store do |s|%>
+    <p>
+        <%=s.label  :name %> <br>
+        <%=s.text_field :name %>
+    </p>
+
+    <p>
+        <%=s.label  :location %><br>
+        <%=s.text_field :location %>
+    </p>
+
+    <p>
+    <%=s.label  :url%><br>
+    <%=s.text_field :url %>
+</p>
+
+<p>
+    <%= s.submit "save" %>
+</p>
+
+    <% end%>
