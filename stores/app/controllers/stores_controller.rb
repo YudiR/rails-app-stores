@@ -23,9 +23,17 @@ class StoresController < ApplicationController
   end
 
   def edit
+    @store = Store.find(params[:id])
   end
 
   def update
+    @store = Store.find(params[:id])
+
+    if @store.update_attributes(store_params)
+      redirect_to "/stores/#{@store.id}"
+    else 
+      render :edit
+    end 
   end
 
   def destroy
