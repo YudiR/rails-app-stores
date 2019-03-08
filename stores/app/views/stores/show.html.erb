@@ -1,4 +1,5 @@
 <%= link_to "Back to stores", stores_url %> | <%= link_to "edit", edit_store_path(@store) %>
+| <%= link_to "delete", @store , method: :delete , data: {confirim: "are you sure you want to delete this store?"} %>
 <h1><%= @store.name %></h1>
 <%= image_tag @store.url%> 
 <h4>Located in <%= @store.location%> </h4>
