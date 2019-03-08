@@ -1,11 +1,13 @@
 <h1>My Faviorate Stores:</h1>
 
+<%= link_to "new store" , "/stores/new"%>
+
 <%@stores.each do |store|%>
 
 <p>Name: <%=store.name %> </p> 
 
 <p> Location: <%=store.location %> </p>
 
-<p> Image:</p><image src="<%= store.url%>">
+<p> Image:</p><%= link_to image_tag(store.url), "/stores/#{store.id}"%>
 
 <% end%> 

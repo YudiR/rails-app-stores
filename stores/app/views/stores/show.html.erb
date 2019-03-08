@@ -1,4 +1,4 @@
 <%= link_to "Back to stores", stores_url %> | <%= link_to "edit", edit_store_path(@store) %>
 <h1><%= @store.name %></h1>
-<img src="<%= @store.url%>"> 
+<%= image_tag @store.url%> 
 <h4>Located in <%= @store.location%> </h4>
