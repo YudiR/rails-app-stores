@@ -1,8 +1,9 @@
-<h1>My Faviorate Stores:</h1>
+<div class="container">
+<h1>My Faviorate Stores: </h1>
 
 <%= link_to "new store" , "/stores/new"%>
-
-<%@stores.each do |store|%>
+<% if @stores.any %>
+<% @stores.each do |store|%>
 
 <p>Name: <%=store.name %> </p> 
 
@@ -10,4 +11,9 @@
 
 <p> Image:</p><%= link_to image_tag(store.url), "/stores/#{store.id}"%>
 
+<% else %>
+
+<p> There are presently no stores <p>
+<% end %>
 <% end%> 
+</div>
